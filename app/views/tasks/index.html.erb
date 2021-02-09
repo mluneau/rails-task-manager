@@ -1,0 +1,22 @@
+<div class="container d-felx justify-content-center">
+  <h1>My tasks</h1>
+
+  <% @tasks.each do |task| %>
+  <%= hidden_field_tag :completed, @completed %>
+  <div class="flex-column">
+    <div class="form-check">
+      <input
+        class="form-check-input-inline"
+        type="checkbox"
+        value=<%= task.completed %>
+        id="flexCheckDefault"
+      />
+      <label class ="form-check-label" for="flexCheckDefault">
+        <%= link_to task.title, task_path(task) %>
+      </label>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+

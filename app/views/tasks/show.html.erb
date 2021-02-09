@@ -1,0 +1,17 @@
+<div class="container">
+  <h2><%= @task.title.capitalize %></h2>
+  <br />
+  <div class="flex-column bg-secondary">
+    <p><%= @task.details %></p>
+  </div>
+  <br />
+  <div class="form-check">
+    <input
+      class="form-check-input-inline"
+      type="checkbox"
+      value=<%= @task.completed %>
+      id="flexCheckDefault"
+    />
+    <label class ="form-check-label"for="flexCheckDefault">This task is not completed yet</label>
+  </div>
+</div>
